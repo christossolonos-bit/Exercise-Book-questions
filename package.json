@@ -1,0 +1,13 @@
+{
+  "name": "who-are-you-workbook",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Who Are You? Workbook — root build orchestrator for Railway (builds the client, runs the server).",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "npm --prefix client install --include=dev && npm --prefix client run build && npm --prefix server install --omit=dev",
+    "start": "node server/src/index.js"
+  }
+}
