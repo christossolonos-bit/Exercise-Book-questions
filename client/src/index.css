@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* ---- Who Are You? Workbook — base theme ----
+   A calm, warm, paper-like palette that suits a reflective self-discovery workbook. */
+
+:root {
+  --paper: #faf7f2;
+  --ink: #2c2a27;
+  --muted: #6f6a63;
+  --accent: #a8743f;      /* warm terracotta */
+  --accent-soft: #efe4d6;
+  --line: #e7ddcf;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Georgia", "Iowan Old Style", "Palatino Linotype", serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* A clean sans for UI chrome (buttons, labels, badges) */
+.ui {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}

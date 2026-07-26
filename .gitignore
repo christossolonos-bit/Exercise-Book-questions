@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.log
+
+# SQLite database + WAL files (local data, never commit)
+server/data/
+
+# Env files with secrets (webhook URL, etc.)
+.env
+*.env
+!.env.example

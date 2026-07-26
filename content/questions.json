@@ -1,0 +1,729 @@
+{
+  "meta": {
+    "version": 1,
+    "note": "Bilingual, typed question set for the Who Are You? Workbook. Greek is the source; English is a faithful draft for Marios to review. Answer types: text, longtext, fields, single_choice, multi_choice, percentage, list, paired, role_grid, statement."
+  },
+  "roles": {
+    "victim": { "el": "Θύμα", "en": "Victim" },
+    "interrogator": { "el": "Ανακριτής", "en": "Interrogator" },
+    "aloof": { "el": "Απόμακρος", "en": "Aloof" },
+    "terrorist": { "el": "Τρομοκράτης", "en": "Terrorist" }
+  },
+  "yesno": [
+    { "value": "yes", "label": { "el": "Ναι", "en": "Yes" } },
+    { "value": "no", "label": { "el": "Όχι", "en": "No" } }
+  ],
+  "chapters": [
+    {
+      "id": "intro",
+      "part": { "el": "Εισαγωγή", "en": "Introduction" },
+      "title": { "el": "Εισαγωγή & Καταγραφή της Στιγμής", "en": "Introduction & Capturing the Moment" },
+      "questions": [
+        {
+          "id": "intro-here-now",
+          "type": "fields",
+          "section": { "el": "Εδώ και Τώρα", "en": "Here and Now" },
+          "prompt": { "el": "Αποτύπωσε αυτή τη στιγμή", "en": "Capture this moment" },
+          "help": { "el": "Γράψε πού και πότε ξεκινάς αυτό το ταξίδι.", "en": "Write down where and when you begin this journey." },
+          "fields": [
+            { "key": "name", "label": { "el": "Όνομα", "en": "Name" } },
+            { "key": "datetime", "label": { "el": "Ημερομηνία & Ώρα", "en": "Date & Time" } },
+            { "key": "place", "label": { "el": "Χώρα & Πόλη", "en": "Country & City" } },
+            { "key": "where", "label": { "el": "Πού βρίσκεσαι τώρα; (π.χ. σπίτι, αυτοκίνητο, διακοπές, καφετέρια)", "en": "Where are you right now? (e.g. home, car, holiday, café)" } }
+          ]
+        },
+        {
+          "id": "intro-wakeup-experience",
+          "type": "longtext",
+          "section": { "el": "Το Δικό σου «Ξυπνητήρι»", "en": "Your Own \"Wake-Up Call\"" },
+          "prompt": {
+            "el": "Χρειάστηκε να ζήσεις ποτέ μια δική σου εμπειρία «engine failure» (μια ασθένεια, ένα ατύχημα, μια απώλεια) που σε έκανε να δεις τη ζωή με άλλα μάτια; Τι συνέβη και τι ένιωσες;",
+            "en": "Have you ever lived through your own \"engine failure\" moment (an illness, an accident, a loss) that made you see life through different eyes? What happened, and what did you feel?"
+          }
+        },
+        {
+          "id": "intro-six-months",
+          "type": "longtext",
+          "section": { "el": "Το Δικό σου «Ξυπνητήρι»", "en": "Your Own \"Wake-Up Call\"" },
+          "prompt": {
+            "el": "Αν μάθαινες ότι σου απομένουν μόνο 6 μήνες ζωής, ποιο είναι το πρώτο πράγμα/ταλέντο/πάθος που θα σταματούσες να καταπιέζεις και θα άφηνες να βγει στην επιφάνεια;",
+            "en": "If you learned you had only 6 months left to live, what is the first thing / talent / passion you would stop suppressing and finally let rise to the surface?"
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "ch1",
+      "part": { "el": "Μέρος Α': Η Αφύπνιση και το Ξεκαθάρισμα", "en": "Part A: The Awakening and the Clearing" },
+      "title": { "el": "Κεφάλαιο 1: Οι Κλέφτες Ενέργειας", "en": "Chapter 1: The Energy Thieves" },
+      "questions": [
+        {
+          "id": "ch1-role-interrogator",
+          "type": "text",
+          "section": { "el": "Αναγνώριση ρόλων γύρω σου", "en": "Recognising the roles around you" },
+          "prompt": {
+            "el": "Ο Ανακριτής: Ποιος σε βομβαρδίζει συνεχώς με ερωτήσεις για το τι κάνεις και τι γίνεται στη ζωή σου; Γράψε το όνομα ή τη σχέση σου μαζί του.",
+            "en": "The Interrogator: Who constantly bombards you with questions about what you're doing and what's happening in your life? Write their name or your relationship to them."
+          }
+        },
+        {
+          "id": "ch1-role-aloof",
+          "type": "text",
+          "section": { "el": "Αναγνώριση ρόλων γύρω σου", "en": "Recognising the roles around you" },
+          "prompt": {
+            "el": "Ο Απόμακρος / Αδιάφορος: Ποιος το παίζει συνεχώς απόμακρος ή απρόσιτος, αναγκάζοντάς σε να προσπαθείς να τον πλησιάσεις; Γράψε το όνομα ή τη σχέση σου μαζί του.",
+            "en": "The Aloof / Indifferent one: Who keeps acting distant or unreachable, forcing you to keep trying to get close to them? Write their name or your relationship to them."
+          }
+        },
+        {
+          "id": "ch1-role-terrorist",
+          "type": "text",
+          "section": { "el": "Αναγνώριση ρόλων γύρω σου", "en": "Recognising the roles around you" },
+          "prompt": {
+            "el": "Ο Τρομοκράτης: Ποιος επιβάλλεται με φόβο, χειραγώγηση και εκφοβισμό, αναγκάζοντάς σε να υποκύπτεις; Γράψε το όνομα ή τη σχέση σου μαζί του.",
+            "en": "The Terrorist: Who imposes themselves through fear, manipulation and intimidation, forcing you to give in? Write their name or your relationship to them."
+          }
+        },
+        {
+          "id": "ch1-clearing-feeling",
+          "type": "longtext",
+          "section": { "el": "Το Ενεργειακό σου Ξεκαθάρισμα", "en": "Your Energy Clearing" },
+          "prompt": {
+            "el": "Πώς νιώθεις στο σώμα και στο μυαλό σου (π.χ. πονοκέφαλο, βάρος, εξάντληση) αμέσως μετά από μια συνάντηση ή ένα τηλεφώνημα με έναν τέτοιον «κλάψα» ή «ανακριτή» του περιβάλλοντός σου;",
+            "en": "How do you feel in your body and mind (e.g. a headache, heaviness, exhaustion) right after a meeting or a phone call with such a \"complainer\" or \"interrogator\" in your life?"
+          }
+        },
+        {
+          "id": "ch1-energy-thieves-grid",
+          "type": "role_grid",
+          "rows": 4,
+          "section": { "el": "Το Ενεργειακό σου Ξεκαθάρισμα", "en": "Your Energy Clearing" },
+          "prompt": {
+            "el": "Γράψε τα ονόματα των 4 μεγαλύτερων «κλεφτών ενέργειας» στη ζωή σου αυτή τη στιγμή και αναγνώρισε τον ρόλο τους.",
+            "en": "Write the names of the 4 biggest \"energy thieves\" in your life right now, and identify the role each one plays."
+          }
+        },
+        {
+          "id": "ch1-your-own-role",
+          "type": "longtext",
+          "section": { "el": "Το Ενεργειακό σου Ξεκαθάρισμα", "en": "Your Energy Clearing" },
+          "prompt": {
+            "el": "Ποιον ρόλο χρησιμοποιείς ΕΣΥ πιο συχνά όταν νιώθεις αδύναμος και ψάχνεις να πάρεις ενέργεια από τους άλλους; (Γίνεσαι απόμακρος; Παραπονιέσαι σαν θύμα; Γίνεσαι επικριτικός ανακριτής; Ή τρομοκράτης;)",
+            "en": "Which role do YOU use most often when you feel weak and are looking to draw energy from others? (Do you become aloof? Complain like a victim? Turn into a critical interrogator? Or a terrorist?)"
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "ch2",
+      "part": { "el": "Μέρος Α': Η Αφύπνιση και το Ξεκαθάρισμα", "en": "Part A: The Awakening and the Clearing" },
+      "title": { "el": "Κεφάλαιο 2: Το Ταξίδι της Αυτοανακάλυψης", "en": "Chapter 2: The Journey of Self-Discovery" },
+      "questions": [
+        {
+          "id": "ch2-i-am",
+          "type": "list",
+          "listCount": 20,
+          "itemPrefix": { "el": "Είμαι…", "en": "I am…" },
+          "section": { "el": "Ποιος είσαι; / Ποια είσαι;", "en": "Who are you?" },
+          "prompt": {
+            "el": "Κάνε την ερώτηση στον εαυτό σου: «Ποιος είμαι / Ποια είμαι;». Φαντάσου ότι σε ρωτάει κάποιος και περιμένει απάντηση. Μην το πολυσκεφτείς — απλά γράψε 20 ιδιότητες, ταλέντα και χαρακτηριστικά σου.",
+            "en": "Ask yourself the question: \"Who am I?\" Imagine someone is asking you and waiting for an answer. Don't overthink it — just write 20 of your qualities, talents and traits."
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "ch3",
+      "part": { "el": "Μέρος Α': Η Αφύπνιση και το Ξεκαθάρισμα", "en": "Part A: The Awakening and the Clearing" },
+      "title": { "el": "Κεφάλαιο 3: Το Τεστ της Απόλυτης Αλήθειας", "en": "Chapter 3: The Test of Absolute Truth" },
+      "questions": [
+        {
+          "id": "ch3-noticed-flaws",
+          "type": "longtext",
+          "section": { "el": "Ώρα για Αυτοκριτική", "en": "Time for Self-Reflection" },
+          "prompt": {
+            "el": "Όταν ήσασταν στα αρχικά, δυνατά στάδια του έρωτά σας, πρόσεχες όλα αυτά τα ελαττώματα, τις ατέλειες και τις εκνευριστικές συμπεριφορές;",
+            "en": "In the early, intense stages of your love, did you notice all those flaws, imperfections and irritating behaviours?"
+          }
+        },
+        {
+          "id": "ch3-what-changed",
+          "type": "longtext",
+          "section": { "el": "Ώρα για Αυτοκριτική", "en": "Time for Self-Reflection" },
+          "prompt": {
+            "el": "Τι άλλαξε από τότε; Τι χάλασε, τι έσβησε, τι λείπει σήμερα από τη σχέση σας;",
+            "en": "What has changed since then? What broke, what faded, what is missing from your relationship today?"
+          }
+        },
+        {
+          "id": "ch3-your-responsibility",
+          "type": "longtext",
+          "section": { "el": "Ώρα για Αυτοκριτική", "en": "Time for Self-Reflection" },
+          "prompt": {
+            "el": "Εσύ είσαι απόλυτα εντάξει; Πόσο αποδέχεσαι τη δική σου ευθύνη μέσα στη σχέση;",
+            "en": "Are you completely blameless? How much do you accept your own responsibility within the relationship?"
+          }
+        },
+        {
+          "id": "ch3-responsibility-percent",
+          "type": "single_choice",
+          "section": { "el": "Ώρα για Αυτοκριτική", "en": "Time for Self-Reflection" },
+          "prompt": {
+            "el": "Ποιο ποσοστό της ευθύνης πιστεύεις ότι σου αναλογεί;",
+            "en": "What percentage of the responsibility do you believe is yours?"
+          },
+          "options": [
+            { "value": "10", "label": { "el": "10%", "en": "10%" } },
+            { "value": "20", "label": { "el": "20%", "en": "20%" } },
+            { "value": "30", "label": { "el": "30%", "en": "30%" } },
+            { "value": "40", "label": { "el": "40%", "en": "40%" } },
+            { "value": "other", "label": { "el": "Άλλο", "en": "Other" } }
+          ]
+        },
+        {
+          "id": "ch3-in-love-with-partner",
+          "type": "single_choice",
+          "section": { "el": "1. Ο Έρωτας & η Σύνδεση", "en": "1. Love & Connection" },
+          "prompt": { "el": "Είσαι ερωτευμένος/η με τον/την σύντροφό σου;", "en": "Are you in love with your partner?" },
+          "options": [
+            { "value": "yes", "label": { "el": "Ναι", "en": "Yes" } },
+            { "value": "no", "label": { "el": "Όχι", "en": "No" } },
+            { "value": "was", "label": { "el": "Ήμουν", "en": "I was" } },
+            { "value": "never", "label": { "el": "Δεν ήμουν ποτέ", "en": "I never was" } }
+          ]
+        },
+        {
+          "id": "ch3-partner-in-love",
+          "type": "single_choice",
+          "section": { "el": "1. Ο Έρωτας & η Σύνδεση", "en": "1. Love & Connection" },
+          "prompt": { "el": "Πιστεύεις ότι είναι ερωτευμένος/η μαζί σου;", "en": "Do you believe they are in love with you?" },
+          "options": [
+            { "value": "yes", "label": { "el": "Ναι", "en": "Yes" } },
+            { "value": "no", "label": { "el": "Όχι", "en": "No" } },
+            { "value": "never", "label": { "el": "Δεν ήταν ποτέ", "en": "They never were" } },
+            { "value": "think_so", "label": { "el": "Έτσι νομίζω", "en": "I think so" } },
+            { "value": "was", "label": { "el": "Ήταν", "en": "They were" } }
+          ]
+        },
+        {
+          "id": "ch3-last-gift",
+          "type": "text",
+          "section": { "el": "1. Ο Έρωτας & η Σύνδεση", "en": "1. Love & Connection" },
+          "prompt": { "el": "Πότε ήταν η τελευταία φορά που έκανες ένα δώρο στον/στην σύντροφό σου;", "en": "When was the last time you gave your partner a gift?" }
+        },
+        {
+          "id": "ch3-last-romantic",
+          "type": "text",
+          "section": { "el": "1. Ο Έρωτας & η Σύνδεση", "en": "1. Love & Connection" },
+          "prompt": { "el": "Πότε αγόρασες λουλούδια ή έκανες μια ρομαντική χειρονομία τελευταία φορά;", "en": "When did you last buy flowers or make a romantic gesture?" }
+        },
+        {
+          "id": "ch3-you-in-love-other",
+          "type": "single_choice",
+          "section": { "el": "2. Απιστία, Υποψίες & Κάρμα", "en": "2. Infidelity, Suspicion & Karma" },
+          "prompt": { "el": "Είσαι ερωτευμένος/η με κάποιο άλλο πρόσωπο;", "en": "Are you in love with someone else?" },
+          "optionsRef": "yesno"
+        },
+        {
+          "id": "ch3-partner-maybe-other",
+          "type": "single_choice",
+          "section": { "el": "2. Απιστία, Υποψίες & Κάρμα", "en": "2. Infidelity, Suspicion & Karma" },
+          "prompt": { "el": "Υπάρχει περίπτωση ο/η σύντροφός σου να είναι ερωτευμένος/η με άλλον;", "en": "Is it possible your partner is in love with someone else?" },
+          "optionsRef": "yesno"
+        },
+        {
+          "id": "ch3-partner-secret-admirer",
+          "type": "single_choice",
+          "section": { "el": "2. Απιστία, Υποψίες & Κάρμα", "en": "2. Infidelity, Suspicion & Karma" },
+          "prompt": { "el": "Πιστεύεις ότι υπάρχει πιθανότητα ο/η σύντροφός σου να έχει έναν μυστικό θαυμαστή ή εραστή;", "en": "Do you believe there's a chance your partner has a secret admirer or lover?" },
+          "optionsRef": "yesno"
+        },
+        {
+          "id": "ch3-are-you-faithful",
+          "type": "single_choice",
+          "section": { "el": "2. Απιστία, Υποψίες & Κάρμα", "en": "2. Infidelity, Suspicion & Karma" },
+          "prompt": { "el": "Είσαι πιστός/ή;", "en": "Are you faithful?" },
+          "optionsRef": "yesno"
+        },
+        {
+          "id": "ch3-ever-unfaithful",
+          "type": "single_choice",
+          "section": { "el": "2. Απιστία, Υποψίες & Κάρμα", "en": "2. Infidelity, Suspicion & Karma" },
+          "prompt": { "el": "Έχεις διαπράξει ποτέ απιστία στη συγκεκριμένη σχέση;", "en": "Have you ever been unfaithful in this relationship?" },
+          "optionsRef": "yesno"
+        },
+        {
+          "id": "ch3-partner-faithful",
+          "type": "single_choice",
+          "section": { "el": "2. Απιστία, Υποψίες & Κάρμα", "en": "2. Infidelity, Suspicion & Karma" },
+          "prompt": { "el": "Πιστεύεις ότι ο/η σύντροφός σου σού είναι πιστός/ή;", "en": "Do you believe your partner is faithful to you?" },
+          "options": [
+            { "value": "yes", "label": { "el": "Ναι", "en": "Yes" } },
+            { "value": "no", "label": { "el": "Όχι", "en": "No" } },
+            { "value": "suspicious", "label": { "el": "Έχω υποψίες", "en": "I have suspicions" } }
+          ]
+        },
+        {
+          "id": "ch3-know-karma",
+          "type": "single_choice",
+          "section": { "el": "2. Απιστία, Υποψίες & Κάρμα", "en": "2. Infidelity, Suspicion & Karma" },
+          "prompt": { "el": "Γνωρίζεις τι είναι το Κάρμα; Αν ναι, πιστεύεις σε αυτό;", "en": "Do you know what Karma is? If so, do you believe in it?" },
+          "options": [
+            { "value": "yes_believe", "label": { "el": "Ναι, και πιστεύω", "en": "Yes, and I believe" } },
+            { "value": "yes_not_believe", "label": { "el": "Ναι, αλλά δεν πιστεύω", "en": "Yes, but I don't believe" } },
+            { "value": "no", "label": { "el": "Όχι", "en": "No" } }
+          ]
+        },
+        {
+          "id": "ch3-forgive-partner",
+          "type": "single_choice",
+          "section": { "el": "2. Απιστία, Υποψίες & Κάρμα", "en": "2. Infidelity, Suspicion & Karma" },
+          "prompt": { "el": "Θα συγχωρούσες τον/την σύντροφό σου αν μάθαινες ότι πήγε με άλλον/η;", "en": "Would you forgive your partner if you found out they had been with someone else?" },
+          "options": [
+            { "value": "yes", "label": { "el": "Ναι", "en": "Yes" } },
+            { "value": "no", "label": { "el": "Όχι", "en": "No" } },
+            { "value": "maybe", "label": { "el": "Ίσως", "en": "Maybe" } }
+          ]
+        },
+        {
+          "id": "ch3-partner-forgive-you",
+          "type": "single_choice",
+          "section": { "el": "2. Απιστία, Υποψίες & Κάρμα", "en": "2. Infidelity, Suspicion & Karma" },
+          "prompt": { "el": "Πιστεύεις ότι εκείνος/η θα σε συγχωρούσε αν μάθαινε κάτι αντίστοιχο για σένα;", "en": "Do you believe they would forgive you if they found out something similar about you?" },
+          "options": [
+            { "value": "yes", "label": { "el": "Ναι", "en": "Yes" } },
+            { "value": "no", "label": { "el": "Όχι", "en": "No" } },
+            { "value": "maybe", "label": { "el": "Ίσως", "en": "Maybe" } }
+          ]
+        },
+        {
+          "id": "ch3-your-responsibility-pct",
+          "type": "percentage",
+          "section": { "el": "3. Η Ζυγαριά της Ευθύνης", "en": "3. The Scale of Responsibility" },
+          "prompt": { "el": "Πόσο τοις εκατό (%) πιστεύεις ότι είναι η ΔΙΚΗ ΣΟΥ ευθύνη για τη σημερινή κατάσταση στη σχέση σας;", "en": "What percentage (%) do you believe is YOUR responsibility for the current state of your relationship?" }
+        },
+        {
+          "id": "ch3-partner-responsibility-pct",
+          "type": "percentage",
+          "section": { "el": "3. Η Ζυγαριά της Ευθύνης", "en": "3. The Scale of Responsibility" },
+          "prompt": { "el": "Πόσο τοις εκατό (%) πιστεύεις ότι είναι η ευθύνη του/της ΣΥΝΤΡΟΦΟΥ σου;", "en": "What percentage (%) do you believe is your PARTNER'S responsibility?" }
+        },
+        {
+          "id": "ch3-accept-100",
+          "type": "single_choice",
+          "section": { "el": "3. Η Ζυγαριά της Ευθύνης", "en": "3. The Scale of Responsibility" },
+          "prompt": { "el": "Αν σου έλεγα ότι έχεις το 100% της ευθύνης (όχι του φταιξίματος, αλλά της ευθύνης), θα το δεχόσουν;", "en": "If I told you that you hold 100% of the responsibility (not the blame, but the responsibility), would you accept it?" },
+          "optionsRef": "yesno"
+        },
+        {
+          "id": "ch3-100-hard",
+          "type": "longtext",
+          "section": { "el": "3. Η Ζυγαριά της Ευθύνης", "en": "3. The Scale of Responsibility" },
+          "prompt": { "el": "Σε δυσκολεύει η ιδέα της 100% ευθύνης; Είσαι υπεύθυνο άτομο; Μπορείς να δεχτείς την ευθύνη μιας κατάστασης όσο οδυνηρό κι αν είναι;", "en": "Does the idea of 100% responsibility trouble you? Are you a responsible person? Can you accept responsibility for a situation, no matter how painful?" }
+        },
+        {
+          "id": "ch3-admit-publicly",
+          "type": "longtext",
+          "section": { "el": "3. Η Ζυγαριά της Ευθύνης", "en": "3. The Scale of Responsibility" },
+          "prompt": { "el": "Το παραδέχεσαι δημόσια; (Δηλαδή θα έβγαινες μπροστά σε υπαλλήλους ή κοινό και θα έλεγες «είμαι 100% υπεύθυνος/η για ό,τι έγινε»;)", "en": "Would you admit it publicly? (Would you stand up in front of employees or an audience and say \"I am 100% responsible for what happened\"?)" }
+        },
+        {
+          "id": "ch3-apologise-easily",
+          "type": "longtext",
+          "section": { "el": "3. Η Ζυγαριά της Ευθύνης", "en": "3. The Scale of Responsibility" },
+          "prompt": { "el": "Ζητάς εύκολα συγγνώμη; Πότε ήταν η τελευταία φορά που ζήτησες συγγνώμη και πώς ένιωσες;", "en": "Do you apologise easily? When was the last time you apologised, and how did you feel?" }
+        },
+        {
+          "id": "ch3-apology-reaction",
+          "type": "longtext",
+          "section": { "el": "3. Η Ζυγαριά της Ευθύνης", "en": "3. The Scale of Responsibility" },
+          "prompt": { "el": "Ποια ήταν η αντίδραση του άλλου / των άλλων μετά τη συγγνώμη που ζήτησες; Πιστεύεις ότι η πραγματική συγγνώμη απελευθερώνει;", "en": "How did the other person / others react after the apology you offered? Do you believe a genuine apology sets you free?" }
+        },
+        {
+          "id": "ch3-apologise-self",
+          "type": "longtext",
+          "section": { "el": "3. Η Ζυγαριά της Ευθύνης", "en": "3. The Scale of Responsibility" },
+          "prompt": { "el": "Ζήτησες καμιά φορά συγγνώμη από τον εαυτό σου; Πέρασε ποτέ από το μυαλό σου ότι μέσα σου υπάρχει ένα κομμάτι του εαυτού σου που στενοχωριέται με τις πράξεις σου;", "en": "Have you ever apologised to yourself? Has it ever crossed your mind that there is a part of you inside that is hurt by your actions?" }
+        }
+      ]
+    },
+
+    {
+      "id": "ch4",
+      "part": { "el": "Μέρος Α': Η Αφύπνιση και το Ξεκαθάρισμα", "en": "Part A: The Awakening and the Clearing" },
+      "title": { "el": "Κεφάλαιο 4: Ο Ασυνείδητος Προγραμματισμός", "en": "Chapter 4: Unconscious Programming" },
+      "questions": [
+        {
+          "id": "ch4-chatterbox-voice",
+          "type": "longtext",
+          "section": { "el": "Εντόπισε το Δικό σου Chatterbox", "en": "Spot Your Own Chatterbox" },
+          "prompt": { "el": "Όταν προσπαθείς να κάνεις μια θετική αλλαγή ή όταν λες μια όμορφη κουβέντα στον εαυτό σου, ποια είναι η αρνητική φωνή που πετάγεται μέσα σου;", "en": "When you try to make a positive change, or say something kind to yourself, what is the negative voice that jumps up inside you?" }
+        },
+        {
+          "id": "ch4-chatterbox-trip",
+          "type": "longtext",
+          "section": { "el": "Εντόπισε το Δικό σου Chatterbox", "en": "Spot Your Own Chatterbox" },
+          "prompt": { "el": "Ποια είναι η πιο συχνή «τρικλοποδιά» που σου βάζει το δικό σου chatterbox; Τι σου λέει;", "en": "What is the most common \"trip-up\" your chatterbox throws at you? What does it say to you?" }
+        },
+        {
+          "id": "ch4-chatterbox-origin",
+          "type": "longtext",
+          "section": { "el": "Εντόπισε το Δικό σου Chatterbox", "en": "Spot Your Own Chatterbox" },
+          "prompt": { "el": "Από ποιον θυμάσαι να ακούς αυτή τη φράση ή αυτό το συναίσθημα όταν ήσουν παιδί; (Γονείς, δάσκαλοι, περιβάλλον;)", "en": "From whom do you remember hearing this phrase or feeling when you were a child? (Parents, teachers, the people around you?)" }
+        }
+      ]
+    },
+
+    {
+      "id": "ch5",
+      "part": { "el": "Μέρος Α': Η Αφύπνιση και το Ξεκαθάρισμα", "en": "Part A: The Awakening and the Clearing" },
+      "title": { "el": "Κεφάλαιο 5: Η Ψευδαίσθηση της Αναμονής", "en": "Chapter 5: The Illusion of Waiting" },
+      "questions": [
+        {
+          "id": "ch5-delay-excuse",
+          "type": "longtext",
+          "section": { "el": "Το Κόστος της Αναβολής", "en": "The Cost of Postponing" },
+          "prompt": { "el": "Σκέψου μια απόφαση που καθυστερείς να πάρεις εδώ και καιρό (επαγγελματικά, προσωπικά, στην υγεία σου). Ποια είναι η δικαιολογία που επιστρατεύει το chatterbox σου; (π.χ. «δεν είμαι έτοιμος», «δεν είναι η κατάλληλη στιγμή»)", "en": "Think of a decision you've been delaying for a long time (work, personal, your health). What excuse does your chatterbox call up? (e.g. \"I'm not ready\", \"it's not the right time\")" }
+        },
+        {
+          "id": "ch5-delay-cost",
+          "type": "longtext",
+          "section": { "el": "Το Κόστος της Αναβολής", "en": "The Cost of Postponing" },
+          "prompt": { "el": "Ποιο είναι το πραγματικό κόστος (σε χρόνο, ενέργεια, ψυχολογία ή χρήμα) όσο αναβάλλεις αυτή την απόφαση;", "en": "What is the real cost (in time, energy, wellbeing or money) for as long as you keep postponing this decision?" }
+        },
+        {
+          "id": "ch5-24h-decision",
+          "type": "text",
+          "section": { "el": "Το Κόστος της Αναβολής", "en": "The Cost of Postponing" },
+          "prompt": { "el": "Γράψε μία ΜΙΚΡΗ απόφαση που δεσμεύεσαι να πάρεις και να υλοποιήσεις ΜΕΣΑ ΣΤΙΣ ΕΠΟΜΕΝΕΣ 24 ΩΡΕΣ.", "en": "Write ONE SMALL decision you commit to making and carrying out WITHIN THE NEXT 24 HOURS." }
+        }
+      ]
+    },
+
+    {
+      "id": "ch7",
+      "part": { "el": "Μέρος Β': Πειθαρχία, Εσωτερικό Παιδί & Απελευθέρωση", "en": "Part B: Discipline, the Inner Child & Release" },
+      "title": { "el": "Κεφάλαιο 7: Η Δύναμη της Συγγνώμης & Το Εσωτερικό Παιδί", "en": "Chapter 7: The Power of Forgiveness & the Inner Child" },
+      "questions": [
+        {
+          "id": "ch7-part-hurt",
+          "type": "single_choice",
+          "section": { "el": "Το Παιδί Μέσα Σου", "en": "The Child Within You" },
+          "prompt": { "el": "Σκέφτηκες ποτέ ότι υπάρχει ένα κομμάτι του εαυτού σου που στενοχωριέται με κάποιες από τις πράξεις σου;", "en": "Have you ever thought that there is a part of you that is saddened by some of your actions?" },
+          "optionsRef": "yesno"
+        },
+        {
+          "id": "ch7-five-year-old",
+          "type": "longtext",
+          "section": { "el": "Το Παιδί Μέσα Σου", "en": "The Child Within You" },
+          "prompt": { "el": "Αν ανακάλυπτες ότι μέσα σου υπάρχει πραγματικά ένα μικρό παιδί —εσύ σε ηλικία 5 χρονών— και ότι αυτό το παιδί καταλαβαίνει και νιώθει τα πάντα στον εσωτερικό σου κόσμο, πώς θα ένιωθες;", "en": "If you discovered there really is a small child inside you —you at the age of 5— and that this child understands and feels everything in your inner world, how would you feel?" }
+        },
+        {
+          "id": "ch7-child-carried",
+          "type": "longtext",
+          "section": { "el": "Το Παιδί Μέσα Σου", "en": "The Child Within You" },
+          "prompt": { "el": "Πώς θα ένιωθες αν αυτό το πεντάχρονο παιδί μέσα σου γνώριζε και βίωνε κάθε θλίψη, απογοήτευση, στενοχώρια, ενοχή, αβεβαιότητα και φόβο που πέρασες στη ζωή σου;", "en": "How would you feel if this five-year-old child within you knew and lived through every sorrow, disappointment, grief, guilt, uncertainty and fear you have been through in your life?" }
+        },
+        {
+          "id": "ch7-have-children",
+          "type": "single_choice",
+          "section": { "el": "Το Παιδί Μέσα Σου", "en": "The Child Within You" },
+          "prompt": { "el": "Έχεις δικά σου παιδιά;", "en": "Do you have children of your own?" },
+          "optionsRef": "yesno"
+        },
+        {
+          "id": "ch7-child-feeling-you",
+          "type": "longtext",
+          "section": { "el": "Το Παιδί Μέσα Σου", "en": "The Child Within You" },
+          "prompt": { "el": "Είτε έχεις είτε δεν έχεις δικά σου παιδιά, αν φανταστείς ότι αυτό το μικρό παιδάκι μέσα σου —ή ένα συγγενικό παιδί που αγαπάς πολύ— ένιωθε πάντα όλες σου τις σκέψεις και τα συναισθήματα, πώς θα ένιωθες εσύ απέναντί του;", "en": "Whether or not you have children of your own: if you imagine that this little child inside you —or a child in your family you love dearly— always felt all your thoughts and emotions, how would you feel toward them?" }
+        },
+        {
+          "id": "ch7-what-baby-feels",
+          "type": "longtext",
+          "section": { "el": "Το Παιδί Μέσα Σου", "en": "The Child Within You" },
+          "prompt": { "el": "Τι θα ήθελες πραγματικά να νιώθει αυτό το μωρό μέσα σου από εδώ και στο εξής;", "en": "What would you truly want this baby inside you to feel from now on?" }
+        },
+        {
+          "id": "ch7-give-child",
+          "type": "longtext",
+          "section": { "el": "Το Παιδί Μέσα Σου", "en": "The Child Within You" },
+          "prompt": { "el": "Ρώτα τον εαυτό σου: «Δίνω σε αυτό το παιδί μέσα μου όλα όσα λαχταράει και όλα όσα έγραψα πιο πάνω;»", "en": "Ask yourself: \"Am I giving this child inside me everything it longs for, everything I wrote above?\"" }
+        },
+        {
+          "id": "ch7-readiness",
+          "type": "statement",
+          "section": { "el": "Δήλωση Ετοιμότητας", "en": "Declaration of Readiness" },
+          "prompt": { "el": "Πες το δυνατά: «ΝΑΙ, ΕΙΜΑΙ ΕΤΟΙΜΟΣ/Η!» και γράψ' το με κεφαλαία γράμματα.", "en": "Say it out loud: \"YES, I AM READY!\" and write it here in capital letters." },
+          "placeholder": { "el": "ΝΑΙ, ΕΙΜΑΙ ΕΤΟΙΜΟΣ/Η!", "en": "YES, I AM READY!" }
+        },
+        {
+          "id": "ch7-last-self-gift",
+          "type": "longtext",
+          "section": { "el": "Το Δώρο των «Γενεθλίων» σου", "en": "Your \"Birthday\" Gift" },
+          "prompt": { "el": "Πότε ήταν η τελευταία φορά που έκανες ένα δώρο στον εαυτό σου; Πότε αγόρασες κάτι προσωπικό, ειδικά για σένα, επειδή απλά το ήθελες; Αν το έκανες, τι ήταν και πότε;", "en": "When was the last time you gave yourself a gift? When did you buy something personal, just for you, simply because you wanted it? If you did, what was it and when?" }
+        },
+        {
+          "id": "ch7-gift-choose",
+          "type": "longtext",
+          "section": { "el": "Το Δώρο των «Γενεθλίων» σου", "en": "Your \"Birthday\" Gift" },
+          "prompt": { "el": "Αν δεν έχεις κάνει δώρο στον εαυτό σου πρόσφατα (ή ποτέ), τι θα διάλεγες τώρα; Κάτι υλικό (ρούχο, ρολόι, άρωμα, φωτογραφική μηχανή) ή μια εμπειρία (μασάζ, μια μέρα σε σπα); Γράψε το δώρο σου.", "en": "If you haven't given yourself a gift recently (or ever), what would you choose now? Something material (clothing, a watch, a perfume, a camera) or an experience (a massage, a day at a spa)? Write down your gift." }
+        },
+        {
+          "id": "ch7-gift-feelings",
+          "type": "longtext",
+          "section": { "el": "Το Δώρο των «Γενεθλίων» σου", "en": "Your \"Birthday\" Gift" },
+          "prompt": { "el": "Αφού πας να αγοράσεις/κάνεις το δώρο, γράψε εδώ τα συναισθήματά σου. Ποιο ήταν το δώρο και πώς ένιωσες; Τι μετακινήθηκε μέσα σου μέσα από αυτή την πράξη;", "en": "After you go and buy / do the gift, write your feelings here. What was the gift and how did you feel? What shifted inside you through that act?" }
+        }
+      ]
+    },
+
+    {
+      "id": "ch8",
+      "part": { "el": "Μέρος Β': Πειθαρχία, Εσωτερικό Παιδί & Απελευθέρωση", "en": "Part B: Discipline, the Inner Child & Release" },
+      "title": { "el": "Κεφάλαιο 8: EFT – Η Τεχνική της Συναισθηματικής Απελευθέρωσης", "en": "Chapter 8: EFT – The Emotional Freedom Technique" },
+      "questions": [
+        {
+          "id": "ch8-eft-belief",
+          "type": "longtext",
+          "section": { "el": "Το Δικό σου Tapping", "en": "Your Own Tapping" },
+          "prompt": { "el": "Διάλεξε μια πεποίθηση ή ένα αρνητικό συναίσθημα που σε βασανίζει αυτή τη στιγμή (π.χ. «Νιώθω άγχος ότι δεν θα τα καταφέρω»). Ποιο συναίσθημα ή μπλοκάρισμα επέλεξες να δουλέψεις σήμερα;", "en": "Choose a belief or a negative emotion that is troubling you right now (e.g. \"I feel anxious that I won't make it\"). Which emotion or block did you choose to work on today?" }
+        },
+        {
+          "id": "ch8-eft-after",
+          "type": "longtext",
+          "section": { "el": "Το Δικό σου Tapping", "en": "Your Own Tapping" },
+          "prompt": { "el": "Κάνε 3 πλήρεις κύκλους tapping (χτυπώντας ρυθμικά τα 9 σημεία του σώματος). Πώς αισθάνεσαι το σώμα σου και την ενέργειά σου τώρα;", "en": "Do 3 full rounds of tapping (rhythmically tapping the 9 points of the body). How does your body and your energy feel now?" }
+        }
+      ]
+    },
+
+    {
+      "id": "ch9",
+      "part": { "el": "Μέρος Β': Πειθαρχία, Εσωτερικό Παιδί & Απελευθέρωση", "en": "Part B: Discipline, the Inner Child & Release" },
+      "title": { "el": "Κεφάλαιο 9: Η Τέχνη της Επιβράβευσης & Η Αφθονία", "en": "Chapter 9: The Art of Praise & Abundance" },
+      "questions": [
+        {
+          "id": "ch9-three-bravos",
+          "type": "list",
+          "listCount": 3,
+          "section": { "el": "Τα Δικά σου «Μπράβο»", "en": "Your Own \"Well Done\"s" },
+          "prompt": { "el": "Γράψε τρία «Μπράβο» για τον εαυτό σου, για πράγματα που πέτυχες πρόσφατα. Μόλις τα γράψεις, διάβασέ τα δυνατά, φωναχτά.", "en": "Write three \"well done\"s to yourself, for things you achieved recently. Once you've written them, read them out loud." }
+        },
+        {
+          "id": "ch9-bravo-feeling",
+          "type": "longtext",
+          "section": { "el": "Τα Δικά σου «Μπράβο»", "en": "Your Own \"Well Done\"s" },
+          "prompt": { "el": "Πώς νιώθεις τώρα που τα διάβασες; Τι συναίσθημα γεννιέται μέσα σου;", "en": "How do you feel now that you've read them? What emotion arises inside you?" }
+        },
+        {
+          "id": "ch9-many-bravos",
+          "type": "longtext",
+          "section": { "el": "Τα Δικά σου «Μπράβο»", "en": "Your Own \"Well Done\"s" },
+          "prompt": { "el": "Πήγαινε πίσω στο παρελθόν σου. Γράψε όσα περισσότερα «Μπράβο» για τον εαυτό σου μπορείς να θυμηθείς, ακόμα και για απλά πράγματα (π.χ. που έμαθες ποδήλατο, που έδεσες τα κορδόνια σου, που μιλάς μια ξένη γλώσσα).", "en": "Go back into your past. Write as many \"well done\"s to yourself as you can remember, even for simple things (e.g. learning to ride a bike, tying your shoelaces, speaking a foreign language)." }
+        },
+        {
+          "id": "ch9-spending-list",
+          "type": "longtext",
+          "section": { "el": "Η Μαγική Λίστα Ξοδέματος", "en": "The Magic Spending List" },
+          "prompt": { "el": "Φαντάσου ότι έχεις στην άκρη όσα χρήματα θέλεις, χωρίς κανέναν περιορισμό. Κάνε μια Λίστα Ξοδέματος: γράψε όλα όσα θέλεις να αγοράσεις για σένα, τι δώρα θέλεις να κάνεις σε άλλους, ποια ταξίδια και διακοπές ονειρεύεσαι, και όποια εμπειρία περνάει από το μυαλό σου.", "en": "Imagine you have all the money you want set aside, with no limits at all. Make a Spending List: write everything you want to buy for yourself, the gifts you want to give others, the trips and holidays you dream of, and any experience that comes to mind." }
+        }
+      ]
+    },
+
+    {
+      "id": "ch11",
+      "part": { "el": "Μέρος Γ': Η Δημιουργία του Μέλλοντος", "en": "Part C: Creating the Future" },
+      "title": { "el": "Κεφάλαιο 11: Η Κινητήριος Δύναμη της Ανακούφισης", "en": "Chapter 11: The Driving Force of Relief" },
+      "questions": [
+        {
+          "id": "ch11-relief-sigh",
+          "type": "longtext",
+          "section": { "el": "Ο Αναστεναγμός της Ανακούφισης", "en": "The Sigh of Relief" },
+          "prompt": { "el": "Κλείσε τα μάτια, πάρε μια βαθιά εισπνοή και δημιούργησε μέσα σου το συναίσθημα της ανακούφισης (έστω και «στα ψέματα» στην αρχή), μέχρι να σου βγει ένας αυθόρμητος αναστεναγμός. Πώς ένιωσες; Ήταν δύσκολο ή εύκολο; Περιέγραψε το συναίσθημά σου.", "en": "Close your eyes, take a deep breath and create within you the feeling of relief (even \"faking it\" at first), until a spontaneous sigh comes out. How did you feel? Was it hard or easy? Describe your feeling." }
+        }
+      ]
+    },
+
+    {
+      "id": "ch12",
+      "part": { "el": "Μέρος Γ': Η Δημιουργία του Μέλλοντος", "en": "Part C: Creating the Future" },
+      "title": { "el": "Κεφάλαιο 12: Ο Αρχιτέκτονας του Μέλλοντος", "en": "Chapter 12: The Architect of the Future" },
+      "questions": [
+        {
+          "id": "ch12-bucket-list",
+          "type": "list",
+          "listCount": 10,
+          "section": { "el": "The Bucket List", "en": "The Bucket List" },
+          "prompt": { "el": "Γράψε 10 πράγματα ή εμπειρίες που θέλεις οπωσδήποτε να ζήσεις πριν φύγεις από αυτόν τον κόσμο.", "en": "Write 10 things or experiences you absolutely want to live before you leave this world." }
+        },
+        {
+          "id": "ch12-identity",
+          "type": "paired",
+          "section": { "el": "1. Η Προσωπική μου Ταυτότητα & Συμπεριφορά", "en": "1. My Personal Identity & Behaviour" },
+          "prompt": { "el": "Πώς θα είμαι στο μέλλον; (Η εμφάνισή μου, η ενέργειά μου, η αύρα μου)", "en": "How will I be in the future? (My appearance, my energy, my aura)" }
+        },
+        {
+          "id": "ch12-behave-all",
+          "type": "paired",
+          "section": { "el": "1. Η Προσωπική μου Ταυτότητα & Συμπεριφορά", "en": "1. My Personal Identity & Behaviour" },
+          "prompt": { "el": "Πώς θα συμπεριφέρομαι γενικά σε όλους;", "en": "How will I behave toward everyone in general?" }
+        },
+        {
+          "id": "ch12-others-behave",
+          "type": "paired",
+          "section": { "el": "1. Η Προσωπική μου Ταυτότητα & Συμπεριφορά", "en": "1. My Personal Identity & Behaviour" },
+          "prompt": { "el": "Πώς θα μου συμπεριφέρονται οι άλλοι;", "en": "How will others behave toward me?" }
+        },
+        {
+          "id": "ch12-family",
+          "type": "paired",
+          "section": { "el": "2. Οι Σχέσεις μου", "en": "2. My Relationships" },
+          "prompt": { "el": "ΟΙΚΟΓΕΝΕΙΑ: Πώς θα είναι η σχέση μου με την οικογένειά μου;", "en": "FAMILY: What will my relationship with my family be like?" }
+        },
+        {
+          "id": "ch12-children",
+          "type": "paired",
+          "section": { "el": "2. Οι Σχέσεις μου", "en": "2. My Relationships" },
+          "prompt": { "el": "ΠΑΙΔΙΑ: Πώς θα είναι η επικοινωνία με τα παιδιά μου; (Αν έχεις ή αν αποκτήσεις)", "en": "CHILDREN: What will communication with my children be like? (If you have them or come to have them)" }
+        },
+        {
+          "id": "ch12-friends",
+          "type": "paired",
+          "section": { "el": "2. Οι Σχέσεις μου", "en": "2. My Relationships" },
+          "prompt": { "el": "ΦΙΛΟΙ: Πώς θα αλληλεπιδρώ με τους φίλους μου;", "en": "FRIENDS: How will I interact with my friends?" }
+        },
+        {
+          "id": "ch12-work",
+          "type": "paired",
+          "section": { "el": "3. Η Επαγγελματική μου Ζωή", "en": "3. My Professional Life" },
+          "prompt": { "el": "Πώς θα είναι η ΕΡΓΑΣΙΑ (δουλειά) μου;", "en": "What will my WORK (job) be like?" }
+        },
+        {
+          "id": "ch12-clients",
+          "type": "paired",
+          "section": { "el": "3. Η Επαγγελματική μου Ζωή", "en": "3. My Professional Life" },
+          "prompt": { "el": "ΠΕΛΑΤΕΣ: Πώς θα συμπεριφέρομαι και θα συνδέομαι με τους πελάτες μου;", "en": "CLIENTS: How will I behave and connect with my clients?" }
+        },
+        {
+          "id": "ch12-colleagues",
+          "type": "paired",
+          "section": { "el": "3. Η Επαγγελματική μου Ζωή", "en": "3. My Professional Life" },
+          "prompt": { "el": "ΣΥΝΑΔΕΛΦΟΙ: Πώς θα είναι η συνεργασία με τους συναδέλφους μου;", "en": "COLLEAGUES: What will working with my colleagues be like?" }
+        },
+        {
+          "id": "ch12-movement",
+          "type": "paired",
+          "section": { "el": "4. Καθημερινότητα, Στυλ & Αφθονία", "en": "4. Daily Life, Style & Abundance" },
+          "prompt": { "el": "Πώς θα κινούμαι; (Οι καθημερινές μου μετακινήσεις, ο ρυθμός μου)", "en": "How will I move through my days? (My daily movement, my rhythm)" }
+        },
+        {
+          "id": "ch12-car",
+          "type": "paired",
+          "section": { "el": "4. Καθημερινότητα, Στυλ & Αφθονία", "en": "4. Daily Life, Style & Abundance" },
+          "prompt": { "el": "Τι αυτοκίνητο θα οδηγώ;", "en": "What car will I drive?" }
+        },
+        {
+          "id": "ch12-everyday-clothes",
+          "type": "paired",
+          "section": { "el": "4. Καθημερινότητα, Στυλ & Αφθονία", "en": "4. Daily Life, Style & Abundance" },
+          "prompt": { "el": "Τι θα φορώ στην καθημερινότητά μου;", "en": "What will I wear in my everyday life?" }
+        },
+        {
+          "id": "ch12-work-clothes",
+          "type": "paired",
+          "section": { "el": "4. Καθημερινότητα, Στυλ & Αφθονία", "en": "4. Daily Life, Style & Abundance" },
+          "prompt": { "el": "Τι ρούχα θα φορώ στην εργασία μου;", "en": "What clothes will I wear at work?" }
+        },
+        {
+          "id": "ch12-money",
+          "type": "paired",
+          "section": { "el": "4. Καθημερινότητα, Στυλ & Αφθονία", "en": "4. Daily Life, Style & Abundance" },
+          "prompt": { "el": "Πόσα χρήματα θα έχω στη διάθεσή μου; (Αποταμιεύσεις, επενδύσεις, οικονομική άνεση)", "en": "How much money will I have available? (Savings, investments, financial comfort)" }
+        },
+        {
+          "id": "ch12-free-time",
+          "type": "paired",
+          "section": { "el": "5. Ελεύθερος Χρόνος & Κοινωνική Ζωή", "en": "5. Free Time & Social Life" },
+          "prompt": { "el": "Πώς θα περνώ τον ελεύθερο χρόνο μου;", "en": "How will I spend my free time?" }
+        },
+        {
+          "id": "ch12-company",
+          "type": "paired",
+          "section": { "el": "5. Ελεύθερος Χρόνος & Κοινωνική Ζωή", "en": "5. Free Time & Social Life" },
+          "prompt": { "el": "Ποιες θα είναι οι παρέες μου;", "en": "Who will my company (the people around me) be?" }
+        },
+        {
+          "id": "ch12-hobbies",
+          "type": "paired",
+          "section": { "el": "5. Ελεύθερος Χρόνος & Κοινωνική Ζωή", "en": "5. Free Time & Social Life" },
+          "prompt": { "el": "Ποια θα είναι τα ενδιαφέροντα και τα χόμπι μου;", "en": "What will my interests and hobbies be?" }
+        },
+        {
+          "id": "ch12-hangouts",
+          "type": "paired",
+          "section": { "el": "5. Ελεύθερος Χρόνος & Κοινωνική Ζωή", "en": "5. Free Time & Social Life" },
+          "prompt": { "el": "Πού θα συχνάζω στον ελεύθερο χρόνο μου;", "en": "Where will I spend my free time?" }
+        },
+        {
+          "id": "ch12-sexuality",
+          "type": "paired",
+          "section": { "el": "6. Εσωτερικός Κόσμος, Προκλήσεις & Σεξουαλικότητα", "en": "6. Inner World, Challenges & Sexuality" },
+          "prompt": { "el": "Πώς θα είναι η σεξουαλική μου ζωή;", "en": "What will my sexual life be like?" }
+        },
+        {
+          "id": "ch12-handling-problems",
+          "type": "paired",
+          "section": { "el": "6. Εσωτερικός Κόσμος, Προκλήσεις & Σεξουαλικότητα", "en": "6. Inner World, Challenges & Sexuality" },
+          "prompt": { "el": "Πώς θα διαχειρίζομαι τα προβλήματα, τις κρίσεις, την αχαριστία ή την κακία των άλλων;", "en": "How will I handle problems, crises, and the ingratitude or malice of others?" }
+        },
+        {
+          "id": "ch12-handling-sorrow",
+          "type": "paired",
+          "section": { "el": "6. Εσωτερικός Κόσμος, Προκλήσεις & Σεξουαλικότητα", "en": "6. Inner World, Challenges & Sexuality" },
+          "prompt": { "el": "Πώς θα αντιμετωπίζω τις στενοχώριες της ζωής;", "en": "How will I face the sorrows of life?" }
+        },
+        {
+          "id": "ch12-climax",
+          "type": "longtext",
+          "section": { "el": "7. Η Μεγάλη Κορύφωση", "en": "7. The Grand Culmination" },
+          "prompt": { "el": "Πώς θα αισθάνομαι όταν και αφού έχω επιτύχει όλα τα πιο πάνω;", "en": "How will I feel when, and after, I have achieved all of the above?" }
+        }
+      ]
+    },
+
+    {
+      "id": "epilogue",
+      "part": { "el": "Επίλογος", "en": "Epilogue" },
+      "title": { "el": "Η Δική σου Παρακαταθήκη", "en": "Your Legacy" },
+      "questions": [
+        {
+          "id": "epi-remembered",
+          "type": "longtext",
+          "section": { "el": "Ο Επικήδειος Λόγος", "en": "The Eulogy" },
+          "prompt": { "el": "Όταν κάποια στιγμή στο μακρινό μέλλον έρθει εκείνη η ώρα... πώς θέλεις να σε θυμούνται; Τι θα ήθελες πραγματικά να ακούσεις να λένε για σένα;", "en": "When, at some point in the distant future, that hour comes... how do you want to be remembered? What would you truly want to hear people say about you?" }
+        },
+        {
+          "id": "epi-family-says",
+          "type": "longtext",
+          "section": { "el": "Ο Επικήδειος Λόγος", "en": "The Eulogy" },
+          "prompt": { "el": "Τι θα ήθελες να πει για σένα ένα μέλος της οικογένειάς σου (ο/η σύντροφος, ένα παιδί, ένα αδέλφι);", "en": "What would you want a member of your family to say about you (your partner, a child, a sibling)?" }
+        },
+        {
+          "id": "epi-work-says",
+          "type": "longtext",
+          "section": { "el": "Ο Επικήδειος Λόγος", "en": "The Eulogy" },
+          "prompt": { "el": "Τι θα ήθελες να πει για σένα ένα άτομο από τον επαγγελματικό σου χώρο (ένας υπάλληλος ή συνάδελφος);", "en": "What would you want someone from your professional life to say about you (an employee or colleague)?" }
+        },
+        {
+          "id": "epi-society-says",
+          "type": "longtext",
+          "section": { "el": "Ο Επικήδειος Λόγος", "en": "The Eulogy" },
+          "prompt": { "el": "Τι θα ήθελες να πει για σένα ένα μέλος από την κοινωνία (ένας φίλος, ένας γείτονας, ο κόσμος);", "en": "What would you want a member of society to say about you (a friend, a neighbour, the world)?" }
+        }
+      ]
+    }
+  ]
+}
