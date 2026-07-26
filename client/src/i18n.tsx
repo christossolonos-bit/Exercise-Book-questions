@@ -14,15 +14,11 @@ const dict = {
 
     // Sign up
     signupTitle: 'Δημιούργησε τον λογαριασμό σου',
-    signupIntro: 'Χρησιμοποίησε τον κωδικό που βρίσκεται μέσα στο βιβλίο σου.',
+    signupIntro: 'Ξεκίνα το ταξίδι σου. Χρειάζεσαι μόνο ένα email κι έναν κωδικό πρόσβασης.',
     name: 'Όνομα',
     email: 'Email',
     password: 'Κωδικός πρόσβασης',
-    accessCode: 'Κωδικός βιβλίου',
-    accessCodePlaceholder: 'π.χ. WAYW-XXXX-XXXX',
     signupBtn: 'Δημιουργία λογαριασμού',
-    codeValid: 'Ο κωδικός είναι έγκυρος ✓',
-    codeChecking: 'Έλεγχος κωδικού…',
 
     // Log in
     loginTitle: 'Καλώς ήρθες πάλι',
@@ -73,8 +69,6 @@ const dict = {
     // Errors (mapped from server error codes)
     err_missing_fields: 'Συμπλήρωσε όλα τα πεδία.',
     err_weak_password: 'Ο κωδικός πρέπει να έχει τουλάχιστον 6 χαρακτήρες.',
-    err_code_invalid: 'Ο κωδικός βιβλίου δεν είναι έγκυρος.',
-    err_code_used: 'Αυτός ο κωδικός έχει ήδη χρησιμοποιηθεί.',
     err_email_taken: 'Υπάρχει ήδη λογαριασμός με αυτό το email.',
     err_bad_credentials: 'Λάθος email ή κωδικός.',
     err_generic: 'Κάτι πήγε στραβά. Δοκίμασε ξανά.',
@@ -91,15 +85,11 @@ const dict = {
 
     // Sign up
     signupTitle: 'Create your account',
-    signupIntro: 'Use the code printed inside your book.',
+    signupIntro: 'Begin your journey. All you need is an email and a password.',
     name: 'Name',
     email: 'Email',
     password: 'Password',
-    accessCode: 'Book code',
-    accessCodePlaceholder: 'e.g. WAYW-XXXX-XXXX',
     signupBtn: 'Create account',
-    codeValid: 'Code is valid ✓',
-    codeChecking: 'Checking code…',
 
     // Log in
     loginTitle: 'Welcome back',
@@ -150,8 +140,6 @@ const dict = {
     // Errors (mapped from server error codes)
     err_missing_fields: 'Please fill in every field.',
     err_weak_password: 'Password must be at least 6 characters.',
-    err_code_invalid: 'That book code is not valid.',
-    err_code_used: 'This code has already been used.',
     err_email_taken: 'An account with this email already exists.',
     err_bad_credentials: 'Wrong email or password.',
     err_generic: 'Something went wrong. Please try again.',

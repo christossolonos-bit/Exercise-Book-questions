@@ -7,8 +7,7 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "node --watch src/index.js",
-    "start": "node src/index.js",
-    "seed": "node src/seed-codes.js"
+    "start": "node src/index.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",

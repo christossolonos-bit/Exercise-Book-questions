@@ -18,7 +18,6 @@ type AuthCtx = {
     name: string
     email: string
     password: string
-    code: string
     lang: 'el' | 'en'
   }) => Promise<void>
   login: (email: string, password: string) => Promise<void>

@@ -1,8 +1,8 @@
 # Who Are You? Workbook · Ποιός / Ποιά Είσαι;
 
 The digital companion workbook for Marios Solonos' book *«Εγχειρίδιο Αφύπνισης και Επανασύνδεσης»*.
-Readers unlock access with a code from the book, work through its questions one at a time on their
-own profile, save and edit their answers, and export an A4 PDF to send to the author for advice.
+Readers create an account, work through its questions one at a time on their own profile,
+save and edit their answers, and export an A4 PDF to send to the author for advice.
 
 Bilingual: **Greek ⇄ English** toggle throughout.
 
@@ -31,7 +31,7 @@ npm run dev
 ## Build order (one step at a time)
 
 1. **Scaffold** — client + server + DB + GR/EN toggle ← _current_
-2. Access-code gate → sign up → log in
+2. Sign up → log in (open registration)
 3. Questions, one at a time → save / edit answers per profile
 4. "My answers" review page
 5. A4 PDF export
