@@ -4,7 +4,9 @@ import { dirname, join } from 'node:path'
 import { mkdirSync } from 'node:fs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const dataDir = join(__dirname, '..', 'data')
+// In production (Railway) point DATA_DIR at a mounted Volume so the database
+// survives redeploys. Locally it defaults to server/data.
+const dataDir = process.env.DATA_DIR || join(__dirname, '..', 'data')
 mkdirSync(dataDir, { recursive: true })
 
 export const db = new Database(join(dataDir, 'workbook.db'))

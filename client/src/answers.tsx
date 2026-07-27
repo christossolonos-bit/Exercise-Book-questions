@@ -13,6 +13,7 @@ type AnswersCtx = {
   isAnswered: (questionId: string) => boolean
   answeredCount: () => number
   save: (questionId: string, value: AnswerValue) => void
+  clearAll: () => Promise<void>
 }
 
 const Ctx = createContext<AnswersCtx | null>(null)
@@ -71,6 +72,12 @@ export function AnswersProvider({ children }: { children: ReactNode }) {
     timers.current[questionId] = setTimeout(() => flush(questionId, value), 600)
   }
 
+  const clearAll = async () => {
+    await api('/answers', { method: 'DELETE' })
+    setMap({})
+    setStatus('idle')
+  }
+
   const value: AnswersCtx = {
     ready,
     status,
@@ -78,6 +85,7 @@ export function AnswersProvider({ children }: { children: ReactNode }) {
     isAnswered: (qid) => hasContent(map[qid]),
     answeredCount: () => Object.keys(map).filter((k) => hasContent(map[k])).length,
     save,
+    clearAll,
   }
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>

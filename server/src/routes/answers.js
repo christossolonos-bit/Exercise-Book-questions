@@ -40,3 +40,9 @@ answersRouter.put('/answers/:questionId', requireAuth, (req, res) => {
 
   res.json({ ok: true })
 })
+
+// Delete ALL of the signed-in reader's answers (offered after a PDF export).
+answersRouter.delete('/answers', requireAuth, (req, res) => {
+  const info = db.prepare('DELETE FROM answers WHERE user_id = ?').run(req.user.id)
+  res.json({ ok: true, deleted: info.changes })
+})

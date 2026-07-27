@@ -17,10 +17,23 @@ export function signToken(user) {
   return jwt.sign({ uid: user.id }, JWT_SECRET, { expiresIn: TOKEN_TTL })
 }
 
+// A user is an admin if their email matches ADMIN_EMAIL (set in the environment).
+export function isAdminEmail(email) {
+  const admin = (process.env.ADMIN_EMAIL || '').trim().toLowerCase()
+  return !!admin && String(email || '').trim().toLowerCase() === admin
+}
+
 // Strip the password hash before sending a user to the client.
 export function publicUser(u) {
   if (!u) return null
-  return { id: u.id, name: u.name, email: u.email, lang: u.lang, createdAt: u.created_at }
+  return {
+    id: u.id,
+    name: u.name,
+    email: u.email,
+    lang: u.lang,
+    createdAt: u.created_at,
+    isAdmin: isAdminEmail(u.email),
+  }
 }
 
 // Express middleware: requires a valid Bearer token, attaches req.user.
@@ -37,4 +50,12 @@ export function requireAuth(req, res, next) {
   } catch {
     return res.status(401).json({ error: 'invalid_token' })
   }
+}
+
+// Express middleware: must run AFTER requireAuth. Blocks non-admins.
+export function requireAdmin(req, res, next) {
+  if (!req.user || !isAdminEmail(req.user.email)) {
+    return res.status(403).json({ error: 'forbidden' })
+  }
+  next()
 }

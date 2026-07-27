@@ -65,6 +65,23 @@ const dict = {
     pdfFor: 'Τετράδιο του/της',
     generatedOn: 'Δημιουργήθηκε',
     preparingPdf: 'Προετοιμασία PDF…',
+    deleteAnswers: 'Διαγραφή απαντήσεων',
+    deleteTitle: 'Να διαγραφούν οι απαντήσεις σου;',
+    deleteBody: 'Αυτό θα διαγράψει οριστικά όλες τις απαντήσεις σου από το προφίλ σου. Όποιο PDF έχεις ήδη κατεβάσει παραμένει στη συσκευή σου.',
+    keepThem: 'Άκυρο',
+    confirmDelete: 'Ναι, διάγραψέ τες',
+    deleting: 'Διαγραφή…',
+
+    // Admin
+    navAdmin: 'Διαχείριση',
+    adminTitle: 'Χρήστες',
+    adminIntro: 'Όλοι όσοι έχουν λογαριασμό και η πρόοδός τους.',
+    adminAnswered: 'απαντήσεις',
+    adminJoined: 'Εγγραφή',
+    adminView: 'Δες απαντήσεις',
+    adminBackToUsers: '← Πίσω στους χρήστες',
+    adminNoAnswers: 'Δεν έχει απαντήσει ακόμα σε καμία ερώτηση.',
+    adminNoUsers: 'Δεν υπάρχουν χρήστες ακόμα.',
 
     // Errors (mapped from server error codes)
     err_missing_fields: 'Συμπλήρωσε όλα τα πεδία.',
@@ -136,6 +153,23 @@ const dict = {
     pdfFor: 'Workbook of',
     generatedOn: 'Generated',
     preparingPdf: 'Preparing PDF…',
+    deleteAnswers: 'Delete my answers',
+    deleteTitle: 'Delete your answers?',
+    deleteBody: 'This permanently removes all your answers from your profile. Any PDF you have already downloaded stays on your device.',
+    keepThem: 'Cancel',
+    confirmDelete: 'Yes, delete them',
+    deleting: 'Deleting…',
+
+    // Admin
+    navAdmin: 'Admin',
+    adminTitle: 'Users',
+    adminIntro: 'Everyone with an account and their progress.',
+    adminAnswered: 'answers',
+    adminJoined: 'Joined',
+    adminView: 'View answers',
+    adminBackToUsers: '← Back to users',
+    adminNoAnswers: "This person hasn't answered any questions yet.",
+    adminNoUsers: 'No users yet.',
 
     // Errors (mapped from server error codes)
     err_missing_fields: 'Please fill in every field.',

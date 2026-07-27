@@ -31,6 +31,11 @@ export function Shell({ children }: { children: ReactNode }) {
               <NavLink to="/review" className={navLink}>
                 {t('navReview')}
               </NavLink>
+              {user.isAdmin && (
+                <NavLink to="/admin" className={navLink}>
+                  {t('navAdmin')}
+                </NavLink>
+              )}
             </nav>
           )}
         </div>

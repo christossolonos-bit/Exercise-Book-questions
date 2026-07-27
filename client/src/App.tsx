@@ -4,6 +4,7 @@ import Signup from './pages/Signup'
 import Login from './pages/Login'
 import Workbook from './pages/Workbook'
 import Review from './pages/Review'
+import Admin from './pages/Admin'
 import { ProtectedRoute } from './components/ProtectedRoute'
 
 export default function App() {
@@ -25,6 +26,14 @@ export default function App() {
         element={
           <ProtectedRoute>
             <Review />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/admin"
+        element={
+          <ProtectedRoute>
+            <Admin />
           </ProtectedRoute>
         }
       />

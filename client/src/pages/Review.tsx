@@ -13,6 +13,7 @@ export default function Review() {
   const answers = useAnswers()
   const [set, setSet] = useState<QuestionSet | null>(null)
   const [exporting, setExporting] = useState(false)
+  const [dialog, setDialog] = useState<'none' | 'confirm' | 'deleting'>('none')
   const L = (x?: LocalizedText) => (x ? x[lang] : '')
 
   useEffect(() => {
@@ -49,6 +50,18 @@ export default function Review() {
       })
     } finally {
       setExporting(false)
+    }
+  }
+
+  async function handleDelete() {
+    setDialog('deleting')
+    try {
+      await answers.clearAll()
+      // Answers are now empty → the page falls through to its empty state,
+      // which confirms the deletion.
+      setDialog('none')
+    } catch {
+      setDialog('none')
     }
   }
 
@@ -108,6 +121,12 @@ export default function Review() {
             >
               {exporting ? t('preparingPdf') : t('exportPdf')}
             </button>
+            <button
+              onClick={() => setDialog('confirm')}
+              className="rounded-full border border-red-200 px-4 py-2 text-sm font-medium text-red-600 transition-colors hover:bg-red-50"
+            >
+              {t('deleteAnswers')}
+            </button>
           </div>
         </div>
 
@@ -140,6 +159,32 @@ export default function Review() {
           })}
         </div>
       </div>
+
+      {/* Delete confirmation modal */}
+      {dialog !== 'none' && (
+        <div className="ui fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-6">
+          <div className="w-full max-w-md rounded-2xl bg-[var(--paper)] p-6 shadow-xl">
+            <h2 className="text-xl font-semibold text-[var(--ink)]">{t('deleteTitle')}</h2>
+            <p className="mt-3 text-[var(--muted)]">{t('deleteBody')}</p>
+            <div className="mt-6 flex justify-end gap-3">
+              <button
+                onClick={() => setDialog('none')}
+                disabled={dialog === 'deleting'}
+                className="rounded-full border border-[var(--line)] px-5 py-2.5 font-medium text-[var(--muted)] transition-colors hover:bg-[var(--accent-soft)] disabled:opacity-50"
+              >
+                {t('keepThem')}
+              </button>
+              <button
+                onClick={handleDelete}
+                disabled={dialog === 'deleting'}
+                className="rounded-full bg-red-600 px-5 py-2.5 font-semibold text-white shadow-sm transition-colors hover:bg-red-700 disabled:opacity-60"
+              >
+                {dialog === 'deleting' ? t('deleting') : t('confirmDelete')}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </Shell>
   )
 }

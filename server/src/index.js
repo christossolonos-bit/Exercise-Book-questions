@@ -7,6 +7,7 @@ import { existsSync } from 'node:fs'
 import { db } from './db.js'
 import { authRouter } from './routes/auth.js'
 import { answersRouter } from './routes/answers.js'
+import { adminRouter } from './routes/admin.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const app = express()
@@ -24,6 +25,7 @@ app.get('/api/health', (_req, res) => {
 
 app.use('/api/auth', authRouter)
 app.use('/api', answersRouter)
+app.use('/api', adminRouter)
 
 // ---- Serve the built React app in production (single Railway service) ----
 const clientDist = join(__dirname, '..', '..', 'client', 'dist')

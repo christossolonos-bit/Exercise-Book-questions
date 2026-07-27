@@ -7,6 +7,7 @@ export type User = {
   email: string
   lang: 'el' | 'en'
   createdAt: string
+  isAdmin?: boolean
 }
 
 type AuthResult = { token: string; user: User }
