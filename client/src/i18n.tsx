@@ -26,6 +26,19 @@ const dict = {
     login: 'Σύνδεση',
     logout: 'Αποσύνδεση',
 
+    // Forgot / reset password
+    forgotLink: 'Ξέχασες τον κωδικό σου;',
+    forgotTitle: 'Επαναφορά κωδικού',
+    forgotIntro: 'Γράψε το email σου και θα σου στείλουμε έναν σύνδεσμο για να ορίσεις νέο κωδικό.',
+    forgotBtn: 'Στείλε μου σύνδεσμο',
+    forgotSent: 'Αν υπάρχει λογαριασμός με αυτό το email, σου στείλαμε έναν σύνδεσμο επαναφοράς. Έλεγξε τα εισερχόμενά σου.',
+    resetTitle: 'Όρισε νέο κωδικό',
+    resetIntro: 'Διάλεξε έναν νέο κωδικό για τον λογαριασμό σου.',
+    newPassword: 'Νέος κωδικός',
+    resetBtn: 'Αποθήκευση κωδικού',
+    resetDone: 'Ο κωδικός σου άλλαξε! Μπορείς να συνδεθείς τώρα.',
+    backToLogin: '← Στη σύνδεση',
+
     // Workbook home
     welcome: 'Καλώς ήρθες',
     yourWorkbook: 'Το τετράδιό σου',
@@ -86,6 +99,7 @@ const dict = {
     err_weak_password: 'Ο κωδικός πρέπει να έχει τουλάχιστον 6 χαρακτήρες.',
     err_email_taken: 'Υπάρχει ήδη λογαριασμός με αυτό το email.',
     err_bad_credentials: 'Λάθος email ή κωδικός.',
+    err_invalid_or_expired: 'Ο σύνδεσμος δεν είναι έγκυρος ή έχει λήξει. Ζήτησε νέον.',
     err_generic: 'Κάτι πήγε στραβά. Δοκίμασε ξανά.',
 
     loadingApp: 'Φόρτωση…',
@@ -111,6 +125,19 @@ const dict = {
     loginBtn: 'Log in',
     login: 'Log in',
     logout: 'Log out',
+
+    // Forgot / reset password
+    forgotLink: 'Forgot your password?',
+    forgotTitle: 'Reset your password',
+    forgotIntro: "Enter your email and we'll send you a link to set a new password.",
+    forgotBtn: 'Send me a link',
+    forgotSent: "If an account exists for that email, we've sent a reset link. Check your inbox.",
+    resetTitle: 'Set a new password',
+    resetIntro: 'Choose a new password for your account.',
+    newPassword: 'New password',
+    resetBtn: 'Save password',
+    resetDone: 'Your password has been changed! You can log in now.',
+    backToLogin: '← Back to log in',
 
     // Workbook home
     welcome: 'Welcome',
@@ -172,6 +199,7 @@ const dict = {
     err_weak_password: 'Password must be at least 6 characters.',
     err_email_taken: 'An account with this email already exists.',
     err_bad_credentials: 'Wrong email or password.',
+    err_invalid_or_expired: 'This link is invalid or has expired. Please request a new one.',
     err_generic: 'Something went wrong. Please try again.',
 
     loadingApp: 'Loading…',

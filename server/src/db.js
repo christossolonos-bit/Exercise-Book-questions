@@ -35,6 +35,16 @@ db.exec(`
     UNIQUE(user_id, question_id),
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
   );
+
+  -- Short-lived password-reset tokens. token_hash = sha256 of the token sent by
+  -- email (we never store the raw token). Single-use + expiring.
+  CREATE TABLE IF NOT EXISTS password_resets (
+    token_hash  TEXT PRIMARY KEY,
+    user_id     INTEGER NOT NULL,
+    expires_at  TEXT NOT NULL,
+    created_at  TEXT NOT NULL DEFAULT (datetime('now')),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+  );
 `)
 
 export default db

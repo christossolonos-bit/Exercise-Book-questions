@@ -59,6 +59,12 @@ export default function Login() {
           </button>
         </form>
 
+        <p className="ui mt-4 text-center text-sm">
+          <Link to="/forgot" className="text-[var(--muted)] hover:text-[var(--accent)]">
+            {t('forgotLink')}
+          </Link>
+        </p>
+
         <p className="ui mt-6 text-center text-sm text-[var(--muted)]">
           {t('noAccount')}{' '}
           <Link to="/signup" className="font-semibold text-[var(--accent)]">
