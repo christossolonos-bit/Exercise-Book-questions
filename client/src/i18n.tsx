@@ -76,11 +76,9 @@ const dict = {
     navAdmin: 'Διαχείριση',
     adminTitle: 'Χρήστες',
     adminIntro: 'Όλοι όσοι έχουν λογαριασμό και η πρόοδός τους.',
+    adminPrivacyNote: 'Οι απαντήσεις των χρηστών είναι ιδιωτικές και δεν εμφανίζονται εδώ.',
     adminAnswered: 'απαντήσεις',
     adminJoined: 'Εγγραφή',
-    adminView: 'Δες απαντήσεις',
-    adminBackToUsers: '← Πίσω στους χρήστες',
-    adminNoAnswers: 'Δεν έχει απαντήσει ακόμα σε καμία ερώτηση.',
     adminNoUsers: 'Δεν υπάρχουν χρήστες ακόμα.',
 
     // Errors (mapped from server error codes)
@@ -164,11 +162,9 @@ const dict = {
     navAdmin: 'Admin',
     adminTitle: 'Users',
     adminIntro: 'Everyone with an account and their progress.',
+    adminPrivacyNote: "Users' answers are private and are not shown here.",
     adminAnswered: 'answers',
     adminJoined: 'Joined',
-    adminView: 'View answers',
-    adminBackToUsers: '← Back to users',
-    adminNoAnswers: "This person hasn't answered any questions yet.",
     adminNoUsers: 'No users yet.',
 
     // Errors (mapped from server error codes)

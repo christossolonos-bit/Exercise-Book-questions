@@ -27,6 +27,9 @@ app.use('/api/auth', authRouter)
 app.use('/api', answersRouter)
 app.use('/api', adminRouter)
 
+// Unknown API routes return JSON 404 (never fall through to the SPA HTML below).
+app.use('/api', (_req, res) => res.status(404).json({ error: 'not_found' }))
+
 // ---- Serve the built React app in production (single Railway service) ----
 const clientDist = join(__dirname, '..', '..', 'client', 'dist')
 if (existsSync(clientDist)) {
