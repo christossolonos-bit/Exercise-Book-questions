@@ -17,10 +17,23 @@ export function signToken(user) {
   return jwt.sign({ uid: user.id }, JWT_SECRET, { expiresIn: TOKEN_TTL })
 }
 
-// A user is an admin if their email matches ADMIN_EMAIL (set in the environment).
+// The workbook owners — always admins.
+const BUILTIN_ADMINS = ['christossolonos@gmail.com', 'mariossolonos@gmail.com']
+
+// The full admin set = the owners above, plus any extra emails listed in the
+// ADMIN_EMAIL env var (comma-separated). All compared lower-cased.
+function adminEmails() {
+  const fromEnv = (process.env.ADMIN_EMAIL || '')
+    .split(',')
+    .map((s) => s.trim().toLowerCase())
+    .filter(Boolean)
+  return new Set([...BUILTIN_ADMINS, ...fromEnv])
+}
+
+// A user is an admin only if their email is in that allow-list.
 export function isAdminEmail(email) {
-  const admin = (process.env.ADMIN_EMAIL || '').trim().toLowerCase()
-  return !!admin && String(email || '').trim().toLowerCase() === admin
+  const e = String(email || '').trim().toLowerCase()
+  return !!e && adminEmails().has(e)
 }
 
 // Strip the password hash before sending a user to the client.
